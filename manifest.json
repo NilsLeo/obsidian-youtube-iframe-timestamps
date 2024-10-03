@@ -1,9 +1,9 @@
 {
-	"id": "sample-plugin",
-	"name": "Sample Plugin",
+	"id": "youtube-iframe-timestamps",
+	"name": "Youtube Iframe Timestamps",
 	"version": "1.0.0",
 	"minAppVersion": "0.15.0",
-	"description": "Demonstrates some of the capabilities of the Obsidian API.",
+	"description": "Allows you to get the timestamp of the current video in a Youtube Iframe and allows you to jump to the timestamp without having to leave obsidian every time.",
 	"author": "Obsidian",
 	"authorUrl": "https://obsidian.md",
 	"fundingUrl": "https://obsidian.md/pricing",
