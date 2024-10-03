@@ -20,7 +20,7 @@ As of right now, Iframes only show up in the Reading View when the Default Editi
 To install this plugin:
 
  1. Download the latest release zip file from https://github.com/NilsLeo/obsidian-youtube-iframe-timestamps/releases
- 2. Copy the files to your Obsidian vault under the ./.obsidian/plugins directory.
+ 2. Extract the files from the zip and copy them to your Obsidian vault under the ./.obsidian/plugins directory.
  3. Restart Obsidian or reload the plugins under Settings → Community Plugins.
  4. Enable the plugin by going to Settings → Community Plugins, and toggle on the “YouTube Iframe Timestamps” plugin.
 
