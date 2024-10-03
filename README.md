@@ -11,12 +11,15 @@ This Obsidian plugin allows you to embed YouTube videos with timestamps directly
  • Helps you stay focused while taking notes, especially for video-heavy workflows.
 
 ---
-
+## Prerequisites: 
+### Limitations
+As of right now, Iframes only show up in the Reading View when the Default Editing mode is set to Source mode. Enable this by going to `Settings -> Editor -> Default editing mode` and Setting it to `Source mode` 
+---
 ## Installation
 
 To install this plugin:
 
- 1. Download the plugin files or clone this repository.
+ 1. Download the latest release zip file from https://github.com/NilsLeo/obsidian-youtube-iframe-timestamps/releases
  2. Copy the files to your Obsidian vault under the ./.obsidian/plugins directory.
  3. Restart Obsidian or reload the plugins under Settings → Community Plugins.
  4. Enable the plugin by going to Settings → Community Plugins, and toggle on the “YouTube Iframe Timestamps” plugin.
