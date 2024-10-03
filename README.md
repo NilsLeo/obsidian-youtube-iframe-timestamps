@@ -1,96 +1,82 @@
-# Obsidian Sample Plugin
+# YouTube Iframe Timestamps Plugin for Obsidian
 
-This is a sample plugin for Obsidian (https://obsidian.md).
+This Obsidian plugin allows you to embed YouTube videos with timestamps directly in your notes, enabling seamless referencing and note-taking without needing to open a separate browser window.
 
-This project uses TypeScript to provide type checking and documentation.
-The repo depends on the latest plugin API (obsidian.d.ts) in TypeScript Definition format, which contains TSDoc comments describing what it does.
+---
 
-**Note:** The Obsidian API is still in early alpha and is subject to change at any time!
+## Features
 
-This sample plugin demonstrates some of the basic functionality the plugin API can do.
-- Adds a ribbon icon, which shows a Notice when clicked.
-- Adds a command "Open Sample Modal" which opens a Modal.
-- Adds a plugin setting tab to the settings page.
-- Registers a global click event and output 'click' to the console.
-- Registers a global interval which logs 'setInterval' to the console.
+ • Automatically embeds YouTube videos with timestamps in an iframe inside Obsidian.
+ • Quickly jump to specific video timestamps by clicking on the YouTube links.
+ • Helps you stay focused while taking notes, especially for video-heavy workflows.
 
-## First time developing plugins?
+---
 
-Quick starting guide for new plugin devs:
+## Installation
 
-- Check if [someone already developed a plugin for what you want](https://obsidian.md/plugins)! There might be an existing plugin similar enough that you can partner up with.
-- Make a copy of this repo as a template with the "Use this template" button (login to GitHub if you don't see it).
-- Clone your repo to a local development folder. For convenience, you can place this folder in your `.obsidian/plugins/your-plugin-name` folder.
-- Install NodeJS, then run `npm i` in the command line under your repo folder.
-- Run `npm run dev` to compile your plugin from `main.ts` to `main.js`.
-- Make changes to `main.ts` (or create new `.ts` files). Those changes should be automatically compiled into `main.js`.
-- Reload Obsidian to load the new version of your plugin.
-- Enable plugin in settings window.
-- For updates to the Obsidian API run `npm update` in the command line under your repo folder.
+To install this plugin:
 
-## Releasing new releases
+ 1. Download the plugin files or clone this repository.
+ 2. Copy the files to your Obsidian vault under the ./.obsidian/plugins directory.
+ 3. Restart Obsidian or reload the plugins under Settings → Community Plugins.
+ 4. Enable the plugin by going to Settings → Community Plugins, and toggle on the “YouTube Iframe Timestamps” plugin.
 
-- Update your `manifest.json` with your new version number, such as `1.0.1`, and the minimum Obsidian version required for your latest release.
-- Update your `versions.json` file with `"new-plugin-version": "minimum-obsidian-version"` so older versions of Obsidian can download an older version of your plugin that's compatible.
-- Create new GitHub release using your new version number as the "Tag version". Use the exact version number, don't include a prefix `v`. See here for an example: https://github.com/obsidianmd/obsidian-sample-plugin/releases
-- Upload the files `manifest.json`, `main.js`, `styles.css` as binary attachments. Note: The manifest.json file must be in two places, first the root path of your repository and also in the release.
-- Publish the release.
+Alternatively, when available in the Community Plugin marketplace, you can install directly from there.
 
-> You can simplify the version bump process by running `npm version patch`, `npm version minor` or `npm version major` after updating `minAppVersion` manually in `manifest.json`.
-> The command will bump version in `manifest.json` and `package.json`, and add the entry for the new version to `versions.json`
+---
 
-## Adding your plugin to the community plugin list
+## Usage
 
-- Check the [plugin guidelines](https://docs.obsidian.md/Plugins/Releasing/Plugin+guidelines).
-- Publish an initial version.
-- Make sure you have a `README.md` file in the root of your repo.
-- Make a pull request at https://github.com/obsidianmd/obsidian-releases to add your plugin.
+Embedding YouTube Videos with Timestamps
 
-## How to use
+To use this plugin, create a note with YouTube links that include timestamps. You will also need an empty <div> with the id of video-player, which acts as the container for the embedded YouTube iframe.
 
-- Clone this repo.
-- Make sure your NodeJS is at least v16 (`node --version`).
-- `npm i` or `yarn` to install dependencies.
-- `npm run dev` to start compilation in watch mode.
+### Viewing Timestamps
+Here’s an example markdown note that uses YouTube links with timestamps:
 
-## Manually installing the plugin
 
-- Copy over `main.js`, `styles.css`, `manifest.json` to your vault `VaultFolder/.obsidian/plugins/your-plugin-id/`.
 
-## Improve code quality with eslint (optional)
-- [ESLint](https://eslint.org/) is a tool that analyzes your code to quickly find problems. You can run ESLint against your plugin to find common bugs and ways to improve your code. 
-- To use eslint with this project, make sure to install eslint from terminal:
-  - `npm install -g eslint`
-- To use eslint to analyze this project use this command:
-  - `eslint main.ts`
-  - eslint will then create a report with suggestions for code improvement by file and line number.
-- If your source code is in a folder, such as `src`, you can use eslint with this command to analyze all files in that folder:
-  - `eslint .\src\`
+```markdown
+<div id="video-player" class="video-player"></div>
 
-## Funding URL
+## Video 1
+https://youtu.be/PjDw3azfZWI?t=644
+https://youtu.be/PjDw3azfZWI?t=643
 
-You can include funding URLs where people who use your plugin can financially support it.
+## Video 2
+https://youtu.be/przDcQe6n5o?t=1
 
-The simple way is to set the `fundingUrl` field to your link in your `manifest.json` file:
+## Footnote
 
-```json
-{
-    "fundingUrl": "https://buymeacoffee.com"
-}
+Let's reference a video using a footnote[^1].
+
+[^1]: https://youtu.be/N7N4EC20-cM?t=279
+
 ```
 
-If you have multiple URLs, you can also do:
+Once the note is created, right-click on any YouTube link and select “Open Timestamp on Iframe.” The video will be loaded inside the iframe at the specified timestamp.
 
-```json
-{
-    "fundingUrl": {
-        "Buy Me a Coffee": "https://buymeacoffee.com",
-        "GitHub Sponsor": "https://github.com/sponsors",
-        "Patreon": "https://www.patreon.com/"
-    }
-}
-```
+![Demo](<CleanShot 2024-10-03 at 16.31.52.gif>)
 
-## API Documentation
 
-See https://github.com/obsidianmd/obsidian-api
+### Adding Timestamps to YouTube Links
+
+To add a timestamp to a YouTube link:
+
+ 1. Navigate to the desired time in the YouTube video.
+ 2. Right-click on the video player and select Copy video URL at the current time.
+ 3. Paste the link into your Obsidian note.
+
+This will allow you to jump to the specific time in the video directly from Obsidian.
+![Demo2](<CleanShot 2024-10-03 at 16.55.45.gif>)
+
+--- 
+
+## Development Setup
+
+If you are interested in contributing or tweaking this plugin:
+
+ 1. Clone the repository.
+ 2. Run npm install to install dependencies.
+ 3. Use npm run dev to start development mode.
+ 4. For production builds, run npm run build.
