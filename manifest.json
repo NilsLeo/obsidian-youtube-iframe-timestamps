@@ -3,7 +3,7 @@
 	"name": "Youtube Iframe Timestamps",
 	"version": "1.0.0",
 	"minAppVersion": "0.15.0",
-	"description": "This Obsidian plugin allows you to embed YouTube videos with timestamps directly in your notes, enabling seamless referencing and note-taking without needing to open a separate browser window.",
+	"description": "Allows you to embed YouTube videos with timestamps directly in your notes, enabling seamless referencing and note-taking without needing to open a separate browser window.",
 	"author": "Nils Leo",
 	"authorUrl": "https://github.com/NilsLeo",
 	"isDesktopOnly": false
