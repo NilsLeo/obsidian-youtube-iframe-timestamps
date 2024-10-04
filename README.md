@@ -83,3 +83,10 @@ If you are interested in contributing or tweaking this plugin:
  2. Run npm install to install dependencies.
  3. Use npm run dev to start development mode.
  4. For production builds, run npm run build.
+
+
+---
+
+## Attribution
+
+https://github.com/gajus/youtube-player - This package facilitated the integration of the YouTube iframe API
