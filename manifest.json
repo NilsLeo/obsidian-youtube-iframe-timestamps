@@ -3,9 +3,7 @@
 	"name": "Youtube Iframe Timestamps",
 	"version": "1.0.0",
 	"minAppVersion": "0.15.0",
-	"description": "Allows you to get the timestamp of the current video in a Youtube Iframe and allows you to jump to the timestamp without having to leave obsidian every time.",
-	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
+	"description": "This Obsidian plugin allows you to embed YouTube videos with timestamps directly in your notes, enabling seamless referencing and note-taking without needing to open a separate browser window.",
+	"author": "Nils Leo",
 	"isDesktopOnly": false
 }
