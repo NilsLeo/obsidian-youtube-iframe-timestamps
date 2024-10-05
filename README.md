@@ -19,7 +19,11 @@ This Obsidian plugin allows you to embed YouTube videos with timestamps directly
 ---
 ## Prerequisites: 
 ### Limitations
-As of right now, Iframes only show up in the Reading View when the Default Editing mode is set to Source mode. Enable this by going to `Settings -> Editor -> Default editing mode` and Setting it to `Source mode` 
+
+
+> [!WARNING] Limitations  
+> As of right now, Iframes only show up in the Reading View when the Default Editing mode is set to Source mode. Enable this by going to `Settings -> Editor -> Default editing mode` and Setting it to `Source mode` 
+
 ---
 ## Installation
 
