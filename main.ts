@@ -6,7 +6,7 @@ export default class YoutubeIframeTimestamps extends Plugin {
 		this.registerEvent(
 			this.app.workspace.on("url-menu", (menu, url) => {
 				menu.addItem((item) => {
-					item.setTitle("Open Timestamp on Iframe")
+					item.setTitle("Open timestamp on iframe")
 						.setIcon("video")
 						.onClick(async () => {
 							this.showIFrame(url);
